@@ -86,9 +86,15 @@ jobs:
       name: Generate coverage report
       run: npm run test:coverage
     
+<<<<<<< HEAD
       name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
+=======
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v5
+>>>>>>> e84661d57787dfda2e87f30b061e72f951b6556c
       with:
+        token: ${{ secrets.CODECOV_TOKEN }}
         file: ./coverage/lcov.info
   
   build-and-deploy:
